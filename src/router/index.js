@@ -1,24 +1,34 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import echartsDemo from '../views/echartsDemo.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'echartsDemo',
+    component: echartsDemo
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/value-html-text',
+    name: 'value-html-text',
+    component: () => import(/* webpackChunkName: "value-html-text" */ '../views/value-html-text.vue')
   },
   {
-    path: '/test',
-    name: 'test',
-    component: () => import(/* webpackChunkName: "test" */ '../views/test.vue')
+    path: '/model-once',
+    name: 'model-once',
+    component: () => import(/* webpackChunkName: "model-once" */ '../views/model-once.vue')
+  },
+  {
+    path: '/dialog',
+    name: 'dialog',
+    component: () => import(/* webpackChunkName: "dialog" */ '../views/dialog.vue')
+  },
+  {
+    path: '/bind-on',
+    name: 'bind-on',
+    component: () => import(/* webpackChunkName: "bind-on" */ '../views/bind-on.vue')
   }
 ]
 

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <h1>echarts组件</h1>
+    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <pieChart :data="data"/>
   </div>
 </template>
@@ -9,7 +10,7 @@
 import pieChart from '@/components/echarts/pieChart.vue'
 
 export default {
-  name: 'Home',
+  name: 'echartsDemo',
   components: {
     pieChart
   },
@@ -29,3 +30,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.home{
+  h1{
+    text-align: center;
+  }
+}
+</style>

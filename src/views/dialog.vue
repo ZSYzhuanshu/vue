@@ -1,9 +1,7 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <el-button type="primary" size="mini" @click="handleClick">按 钮</el-button>
-    <el-button type="danger" size="mini" @click="handleClick1">点击打开弹窗</el-button>
-    {{count}}
+    <h1>dialog组件</h1>
+    <el-button type="danger" size="mini" @click="handleClick">点击打开弹窗</el-button>
     <Dialog :dialogVisible.sync="visible">新增商品</Dialog>
   </div>
 </template>
@@ -25,19 +23,16 @@ export default {
   watch:{},
   methods: {
     handleClick() {
-      this.count += 1
-    },
-    handleClick1() {
       this.visible = true
-      // this.$message({
-      //   type: 'success',
-      //   message: '弹窗打开了',
-      // })
     }
   },
 }
 </script>
 
-<style lang="" scoped>
-  
+<style lang="scss" scoped>
+.about{
+//   h1{
+    text-align: center;
+//   }
+}
 </style>
