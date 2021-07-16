@@ -40,7 +40,7 @@
 <script>
 export default {
     name: 'model-once',
-    component: {},
+    components: {},
     data() {
         return {
             value: '11111',
@@ -56,19 +56,8 @@ export default {
         }
     },
     computed: {
-        formatName() {
-            return function(val) {
-                return val.join('、')
-            }
-        }
     },
     watch: {
-        count: function(val) {
-            this.$message({
-                type: 'success',
-                message: `count改变了，变为${val}`
-            })
-        }
     },
 }
 </script>

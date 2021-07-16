@@ -8,7 +8,13 @@
       案例：
       <router-link to="/value-html-text">value-html-text</router-link> |
       <router-link to="/model-once">model-once</router-link> ｜
-      <router-link to="/bind-on">bind-on</router-link> ｜
+      <router-link to="/bind-on">bind-on</router-link>｜
+      <router-link to="/for-if-show">for-if-show</router-link> |
+      <router-link to="/data">data</router-link> |
+      <router-link to="/computed">computed</router-link> |
+      <router-link to="/watch">watch</router-link> |
+      <router-link to="/lifeCycle">lifeCycle</router-link> |
+      <router-link to="/component">component</router-link> |
 
     </div>
     <router-view/>

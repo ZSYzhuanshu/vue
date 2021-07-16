@@ -29,6 +29,36 @@ const routes = [
     path: '/bind-on',
     name: 'bind-on',
     component: () => import(/* webpackChunkName: "bind-on" */ '../views/bind-on.vue')
+  },
+  {
+    path: '/for-if-show',
+    name: 'for-if-show',
+    component: () => import(/* webpackChunkName: "for-if-show" */ '../views/for-if-show.vue')
+  },
+  {
+    path: '/data',
+    name: 'data',
+    component: () => import(/* webpackChunkName: "data" */ '../views/data.vue')
+  },
+  {
+    path: '/computed',
+    name: 'computed',
+    component: () => import(/* webpackChunkName: "computed" */ '../views/computed.vue')
+  },
+  {
+    path: '/watch',
+    name: 'watch',
+    component: () => import(/* webpackChunkName: "watch" */ '../views/watch.vue')
+  },
+  {
+    path: '/lifeCycle',
+    name: 'lifeCycle',
+    component: () => import(/* webpackChunkName: "lifeCycle" */ '../views/lifeCycle.vue')
+  },
+  {
+    path: '/component',
+    name: 'component',
+    component: () => import(/* webpackChunkName: "component" */ '../views/component.vue')
   }
 ]
 
