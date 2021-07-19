@@ -6,4 +6,4 @@ module.exports = {
         index: entry,
     },
     outputDir: 'dist'
-}
+}  

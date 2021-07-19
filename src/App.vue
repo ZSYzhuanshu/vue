@@ -14,8 +14,7 @@
       <router-link to="/computed">computed</router-link> |
       <router-link to="/watch">watch</router-link> |
       <router-link to="/lifeCycle">lifeCycle</router-link> |
-      <router-link to="/component">component</router-link> |
-
+      <router-link to="/component">component</router-link>
     </div>
     <router-view/>
   </div>
@@ -26,7 +25,6 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
 }
 
