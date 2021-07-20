@@ -674,13 +674,7 @@ __通过观察以上示例我们强调一点，ref必须在mounted(页面渲染�
 
 Vue Router 是 [Vue.js (opens new window)](http://cn.vuejs.org/)官方的路由管理器。
 
-### 基础
-
-### 引用
-
 ### 参考资料
-
-
 
 - https://router.vuejs.org/zh/
 - https://www.jianshu.com/p/4b833b23dc4a
@@ -691,109 +685,14 @@ Vue Router 是 [Vue.js (opens new window)](http://cn.vuejs.org/)官方的路由�
 
 Vuex 是一个专为 Vue.js 应用程序开发的**状态管理模式**。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。
 
- 
-
-翻译一下：现如今的web应用大多就是操作数据，对数据进行保存、操作和**管理**就是web应用的核心思想。
-
- 
-
-那这些数据我们怎么保存呢？全局变量？localstorage？显然这两种方式能够保存数据。那我们也要操作和管理数据怎么办呢？比如后端返回的JSON数据需要我们做一下什么什么预处理，我们想保存数据的同时就做了这些数据处理。如果使用全局变量或者localStorage我们需要写配套的数据处理逻辑，那么问题来了，localStorage里面的内容改了你组件数据会改吗？ （可以做一下onStorage监听，恭喜你要做出一个类vuex的东西了）。
-
- 
-
-这样的数据有了个100、1000个会怎么办！这里面的数据如果还有的相互依赖我们有会怎么办？那就需要花费大量的时间和精力进行分析封装和管理。
-
- 
-
-而Vuex就是把数据和数据处理逻辑全部集中到一个单独的模块管理对象上，让这个对象进行管理。
-
- 
-
-此外由于Vue是单向数据流，因为用户一些行为（Actions）导致了数据发生了变化（State），数据驱动页面视图（View）改变，视图更新后又有会有一些行为（Actions）用户可以触发，以此循环。
-
- 
-
-- **state**，驱动应用的数据源；
-- **view**，以声明方式将 **state** 映射到视图；
-
-- **actions**，响应在 **view** 上的用户输入导致的状态变化。
-
- 
-
-![img](https://camo.githubusercontent.com/e6c522fcdf513e494528be82c9bbf84649f8ec771563f171dc5b32945813155d/687474703a2f2f616c6979756e2e696d6167652e657965736b792e736974652f696d616765732f323032302f30352f32392f696d6167652e706e67)
-
- 
-
-在这种单向数据流的模式下，如果多个组件视图中都依赖同一个状态（state），这个状态（state）改变需要更改多个视图或怎么样？同样的，多个视图的一些行为会更改同一个状态又会怎么样？
-
- 
-
-在这种多组件共享状态的情况下，其实Vue中仍然有一些方法可以解决。
-
- 
-
-如果一个状态（state）改变需要更改多个视图，可以利用组件传值的方法：就是如果我这里数据发生了改变，我把它传给同时需要这个数据状态的组件，告诉他需要的这个state发生了改变，让其更改视图。
-
- 
-
-组件间的传值主要有
-
- 
-
-- 兄弟组件 ---兄弟组件（bus.js）
-- 父组件---子组件（props down）
-
-- 子组件---父组件（emit on）
-
- 
-
-如果多个视图Actions更改同一个状态，可以利用本地化存储localStorage以及监听或变更和同步多个拷贝状态。
-
- 
-
-以上都比较麻烦且不容易维护，所以Vue把这种共享状态分离出来，用一个全局对象状态树管理，这就是状态管理模式Vuex。
-
-
-
-大部分项目的状态管理分为了两个部分，为什么要分为两个部分，因为使用一个状态树想要把状态全部集中起来太过繁琐复杂且臃肿。目录结构如下。
-
-
-
-```
-https://vuex.vuejs.org/zh/.
-|-- global
-|   |-- actions.js
-|   |-- getters.js
-|   |-- index.js
-https://vuex.vuejs.org/zh/|   |-- mutation-types.js
-|   |-- mutations.js
-|   `-- state.js
-|-- index.js
-`-- modules // 每个模块都有其对应的 state getters action mutations
-    |-- disease.js
-    |-- index.js
-     `-- pest.js
-```
-
-### 基础
-
-### 应用
-
 ### 参考资料
-
-
 
 - https://vuex.vuejs.org/zh/
 
-  
 
 ## 从零构建todolist应用
 
-
-
 #### 主要目的
-
-
 
 - 🔲vue-cli 脚手架基本认识
 
@@ -803,11 +702,7 @@ https://vuex.vuejs.org/zh/|   |-- mutation-types.js
 
 - 🔲vuex熟悉及应用
 
-
-
 #### 应用功能
-
-
 
 1. 本地缓存，并动态存储到LocalStorage中
 
@@ -821,11 +716,7 @@ https://vuex.vuejs.org/zh/|   |-- mutation-types.js
 
 1. 根据完成状态筛选代办事项列表
 
-
-
 #### 参考资料
-
-
 
 -  https://todomvc.com/examples/vue/ 
 
