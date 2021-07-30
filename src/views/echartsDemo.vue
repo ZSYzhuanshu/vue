@@ -27,6 +27,8 @@ export default {
       {value: 235, name: '视频广告'},
       {value: 400, name: '搜索引擎'}
     ]
+    this.$store.dispatch('addCount')
+    console.log(this.$store.state.setting.count)
   },
 }
 </script>
