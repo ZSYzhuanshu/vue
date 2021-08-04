@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { debounce } from 'lodash'
+
 export default {
     name: 'model-once',
     components: {},
@@ -36,9 +38,10 @@ export default {
         }
     },
     methods: {
-        handleClick() {
+        handleClick: debounce(function() {
+            console.log(1)
             this.value = '我通过点击按钮改变了值'
-        },
+        },5000)
     },
     computed: {
     },
