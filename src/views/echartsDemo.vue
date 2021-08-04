@@ -29,6 +29,7 @@ export default {
     ]
     this.$store.dispatch('addCount')
     console.log(this.$store.state.setting.count)
+    console.log(this.$store.getters.setting)
   },
 }
 </script>
